@@ -1,4 +1,4 @@
-# Calendario Copa 2022
+#  ⚽ Calendario Copa 2022  ⚽
 
 Calendario dos primeiros jogos da copa do mundo de 2022 em que o Brasil vai jogar, feito com HTML, CSS E JAVASCRIPT.
 
