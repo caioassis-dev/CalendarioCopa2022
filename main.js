@@ -15,22 +15,26 @@ function createGame(player1, hour, player2, scorePlayer1, scorePlayer2) {
 }
 
 let delay = -0.4;
-function createCard(date, day, games) {
+function createCard(date, day, games, penalti) {
   delay = delay + 0.4;
   return `
   <div class="card" style="animation-delay: ${delay}s">
   <h2>${date} <span>${day}</span></h2>
   <ul>
     ${games}
+    ${penalti}
   </ul>
 </div>
   `
 }
 
 document.querySelector("#cards").innerHTML = 
-  createCard("24/11", "quinta", createGame('serbia', '16:00', 'brazil', '0', '2'))+
-  createCard("28/11", "segunda", createGame('brazil', '13:00', 'switzerland','1', '0'))+
-  createCard("02/12", "sexta", createGame('cameroon', '16:00', 'brazil','1', '0'))+
-  createCard("05/12", "segunda", createGame('brazil', '16:00', 'SouthKorea','4', '1'))
+  createCard("24/11", "quinta", createGame('serbia', '16:00', 'brazil', '0', '2'),(''))+
+  createCard("28/11", "segunda", createGame('brazil', '13:00', 'switzerland','1', '0'),(''))+
+  createCard("02/12", "sexta", createGame('cameroon', '16:00', 'brazil','1', '0'),(''))+
+  createCard("05/12", "segunda", createGame('brazil', '16:00', 'SouthKorea','4', '1'),(''))+
+  createCard("09/12", "sexta", createGame('croatia', '12:00', 'brazil','1', '1'),(`<h2>Pênalti
+  </h2><li><h2>4</h2><h2>X</h2><h2>2</h2></li>`))+
+  createCard("GAME OVER", "", "<h2>RUMO AO HEXA 2026</h2>", "")
 
 
